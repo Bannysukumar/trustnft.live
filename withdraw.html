@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .withdraw-container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .bank-details-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .detail-value {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .withdraw-form {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .withdraw-button {
+            width: 100%;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .withdraw-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .balance-display {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .balance-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .balance-amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 5px;
+        }
+
+        .no-wallet-message {
+            text-align: center;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .bind-wallet-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Withdraw</div>
+        
+        <div class="withdraw-container">
+            <div class="balance-display">
+                <div class="balance-label">Available Balance</div>
+                <div class="balance-amount" id="userBalance">$0.00</div>
+        </div>
+
+            <div id="walletDetailsSection">
+                <!-- Wallet details will be displayed here -->
+    </div>
+
+            <div class="withdraw-form" id="withdrawForm" style="display: none;">
+                <div class="input-group">
+                    <label>Withdraw Amount</label>
+                    <input type="number" id="withdrawAmount" placeholder="Enter amount">
+                </div>
+
+                <button class="withdraw-button" id="withdrawButton">Withdraw</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Initialize Firebase -->
+    <script src="firebase-config.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="withdraw.js"></script>
+
+    <!-- Navigation -->
+    <div class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <img src="images/icons/home.svg" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item">
+            <img src="images/icons/products.svg" alt="Products">
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item">
+            <img src="images/icons/profit.svg" alt="Profit">
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item">
+            <img src="images/icons/invite.svg" alt="Invite">
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item">
+            <img src="images/icons/mine.svg" alt="Mine">
+            <span>Mine</span>
+        </a>
+    </div>
+</body>
+</html> 

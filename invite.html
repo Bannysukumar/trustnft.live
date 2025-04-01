@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Invites</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .invite-container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .invite-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .invite-code {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .code-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+
+        .copy-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .referral-list {
+            margin-top: 20px;
+        }
+
+        .referral-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .referral-phone {
+            color: #212529;
+        }
+
+        .referral-date {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .share-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .telegram-btn {
+            background: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">My Invites</div>
+        
+        <div class="invite-container">
+            <div class="invite-card">
+                <h2>My Invitation Code</h2>
+                <div class="invite-code">
+                    <div class="code-text" id="referralCode">Loading...</div>
+                    <button class="copy-btn" id="copyBtn">Copy Code</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value" id="totalInvites">0</div>
+                        <div class="stat-label">Total Invites</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="totalRewards">0</div>
+                        <div class="stat-label">Total Rewards</div>
+                    </div>
+                </div>
+
+                <div class="share-buttons">
+                    <button class="share-btn whatsapp-btn" id="whatsappShare">Share on WhatsApp</button>
+                    <button class="share-btn telegram-btn" id="telegramShare">Share on Telegram</button>
+                </div>
+            </div>
+
+            <div class="invite-card">
+                <h2>My Referrals</h2>
+                <div class="referral-list" id="referralsList">
+                    <!-- Referrals will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Initialize Firebase -->
+    <script src="firebase-config.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="invite.js"></script>
+
+    <!-- Navigation -->
+    <div class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <img src="images/icons/home.svg" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item">
+            <img src="images/icons/products.svg" alt="Products">
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item">
+            <img src="images/icons/profit.svg" alt="Profit">
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item active">
+            <img src="images/icons/invite.svg" alt="Invite">
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item">
+            <img src="images/icons/mine.svg" alt="Mine">
+            <span>Mine</span>
+        </a>
+    </div>
+</body>
+</html> 

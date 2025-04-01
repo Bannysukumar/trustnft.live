@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustNFT - Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="left-section">
+                <img src="logo.nft.jpg" alt="TrustNFT Logo" class="header-logo">
+                <h1>TrustNFT</h1>
+            </div>
+            <div class="right-section">
+                <div class="notification-icon">
+                    <span class="material-icons">notifications</span>
+                    <span class="notification-badge">0</span>
+                </div>
+                <div class="user-balance">
+                    <span class="balance-label">Balance</span>
+                    <span class="balance-amount">$ 0.00</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Banner Slider -->
+        <section class="banner-slider">
+            <div class="banner-container">
+                <div class="banner active">
+                    <img src="banner1.jpg" alt="Promotion 1">
+                </div>
+                <div class="banner">
+                    <img src="banner2.jpg" alt="Promotion 2">
+                </div>
+                <div class="banner">
+                    <img src="banner3.jpg" alt="Promotion 3">
+                </div>
+            </div>
+            <div class="banner-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <span class="material-icons">trending_up</span>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label">Today's Profit</span>
+                    <span class="stat-value">$ 0.00</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <span class="material-icons">account_balance</span>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label">Total Profit</span>
+                    <span class="stat-value">$ 0.00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Plans Section -->
+        <section class="popular-plans">
+            <div class="section-header">
+                <h2>Popular Plans</h2>
+                <a href="products.html" class="view-all">View All</a>
+            </div>
+            <div class="plans-container">
+                <!-- Product cards will be dynamically added here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item active">
+            <span class="material-icons">home</span>
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item">
+            <span class="material-icons">inventory_2</span>
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item">
+            <span class="material-icons">trending_up</span>
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item">
+            <span class="material-icons">group_add</span>
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item">
+            <span class="material-icons">person</span>
+            <span>Mine</span>
+        </a>
+    </nav>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="daily-returns.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html> 

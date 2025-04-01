@@ -1,0 +1,207 @@
+:root {
+    --primary-color: #68318C;
+    --secondary-color: #FF6B00;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+header {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.back-button {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.balance-info {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.balance-item {
+    text-align: center;
+}
+
+.balance-item .label {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.balance-item .value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bank-section, .withdraw-section {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bank-info {
+    margin-top: 15px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row .label {
+    color: #666;
+}
+
+.detail-row .value {
+    font-weight: bold;
+}
+
+.edit-bank {
+    display: block;
+    text-align: center;
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.amount-input {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.currency {
+    font-size: 20px;
+    color: #666;
+    margin-right: 10px;
+}
+
+#withdraw-amount {
+    flex: 1;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
+
+.amount-note {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.quick-amounts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.amount-btn {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+.amount-btn.active {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.action-buttons {
+    padding: 0 15px;
+}
+
+.withdraw-btn, .history-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.withdraw-btn {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.history-btn {
+    background: white;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.withdrawal-notes {
+    margin: 15px;
+}
+
+.note-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.note-item .icon {
+    margin-right: 10px;
+}
+
+.no-bank-details {
+    text-align: center;
+    padding: 20px;
+}
+
+.no-bank-details p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.add-bank-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+} 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .bank-container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .bank-details-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .detail-value {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .action-button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .edit-button {
+            background: #007bff;
+            color: white;
+        }
+
+        .add-button {
+            background: #28a745;
+            color: white;
+        }
+
+        .no-bank-message {
+            text-align: center;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .loading-message {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Bank Account</div>
+        
+        <div class="bank-container">
+            <div id="bankDetailsSection">
+                <div class="loading-message">Loading bank details...</div>
+            </div>
+
+            <div class="action-buttons" id="actionButtons">
+                <!-- Buttons will be added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Initialize Firebase -->
+    <script src="firebase-config.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="bank-account.js"></script>
+
+    <!-- Navigation -->
+    <div class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <img src="images/icons/home.svg" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item">
+            <img src="images/icons/products.svg" alt="Products">
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item">
+            <img src="images/icons/profit.svg" alt="Profit">
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item">
+            <img src="images/icons/invite.svg" alt="Invite">
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item active">
+            <img src="images/icons/mine.svg" alt="Mine">
+            <span>Mine</span>
+        </a>
+    </div>
+</body>
+</html> 

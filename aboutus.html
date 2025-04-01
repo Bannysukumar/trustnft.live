@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TrustNFT</title>
+    <style>
+        :root {
+            --primary-color: #68318C;
+            --secondary-color: #FF6B00;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .about-container {
+            padding: 20px;
+            background: white;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .about-section {
+            margin-bottom: 25px;
+        }
+
+        .about-section h2 {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .about-section p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        .contact-info {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        .bottom-nav .nav-item {
+            text-decoration: none;
+            color: #666;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .bottom-nav .nav-item.active {
+            color: var(--secondary-color);
+        }
+
+        .nav-item img {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+
+        .nav-item span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <div class="about-container">
+        <div class="about-section">
+            <h2>Welcome to TrustNFT</h2>
+            <p>TrustNFT is a leading investment platform dedicated to providing innovative financial solutions and investment opportunities to our valued clients. With years of experience in the financial sector, we've built a reputation for reliability, transparency, and excellence.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower investors by providing accessible, secure, and profitable investment opportunities. We strive to create a platform where financial growth is achievable for everyone through smart investments and strategic planning.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Why Choose Us</h2>
+            <ul class="features-list">
+                <li>Secure and reliable investment platform</li>
+                <li>Transparent profit-sharing system</li>
+                <li>Professional customer support</li>
+                <li>Daily profit distribution</li>
+                <li>Multiple investment options</li>
+                <li>Real-time profit tracking</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>Our Values</h2>
+            <p>We believe in transparency, integrity, and customer satisfaction. Our platform is built on these core values, ensuring that every investor's experience is secure and rewarding.</p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: support@federalpreferred.com</p>
+            <p>Working Hours: 24/7 Customer Support</p>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <img src="images/icons/home.svg" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item">
+            <img src="images/icons/products.svg" alt="Products">
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item">
+            <img src="images/icons/profit.svg" alt="Profit">
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item">
+            <img src="images/icons/invite.svg" alt="Invite">
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item">
+            <img src="images/icons/mine.svg" alt="Mine">
+            <span>Mine</span>
+        </a>
+    </nav>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+</body>
+</html> 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustNFT - My Account</title>
+    <link rel="stylesheet" href="mine-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="left-section">
+                <span class="material-icons back-button">arrow_back</span>
+                <h1>My Account</h1>
+            </div>
+            <div class="right-section">
+                <div class="notification-icon">
+                    <span class="material-icons">notifications</span>
+                    <span class="notification-badge">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <!-- User Profile Section -->
+        <section class="user-profile">
+            <div class="profile-header">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <span class="material-icons">account_circle</span>
+                    </div>
+                    <div class="user-details">
+                        <div class="user-phone"></div>
+                        <div class="user-id"></div>
+                    </div>
+                </div>
+                <div class="vip-badge">
+                    <span class="material-icons">workspace_premium</span>
+                    <span>VIP1</span>
+                </div>
+            </div>
+
+            <div class="balance-cards">
+                <div class="balance-card">
+                    <span class="balance-label">Total Balance</span>
+                    <span class="balance-value">$<span class="total-balance">0.00</span></span>
+                    <button class="action-button recharge">
+                        <span class="material-icons">add</span>
+                        Recharge
+                    </button>
+                </div>
+                <div class="balance-card">
+                    <span class="balance-label">Today's Profit</span>
+                    <span class="balance-value">$<span class="today-profit">0.00</span></span>
+                    <button class="action-button withdraw">
+                        <span class="material-icons">account_balance_wallet</span>
+                        Withdraw
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu-section">
+            <div class="menu-group">
+                <a href="bind-wallet.html" class="menu-item">
+                    <span class="material-icons">account_balance_wallet</span>
+                    <span>Bind Wallet Address</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+                <a href="recharge.html" class="menu-item">
+                    <span class="material-icons">payments</span>
+                    <span>Recharge</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+                <a href="withdraw.html" class="menu-item">
+                    <span class="material-icons">account_balance_wallet</span>
+                    <span>Withdraw</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+            </div>
+
+            <div class="menu-group">
+                <a href="transaction-record.html" class="menu-item">
+                    <span class="material-icons">history</span>
+                    <span>Transaction History</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+                <a href="change-password.html" class="menu-item">
+                    <span class="material-icons">lock</span>
+                    <span>Change Password</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+                <a href="support.html" class="menu-item">
+                    <span class="material-icons">support_agent</span>
+                    <span>Customer Support</span>
+                    <span class="material-icons">chevron_right</span>
+                </a>
+            </div>
+
+            <button class="logout-button">
+                <span class="material-icons">logout</span>
+                Logout
+            </button>
+        </section>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <span class="material-icons">home</span>
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item">
+            <span class="material-icons">inventory_2</span>
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item">
+            <span class="material-icons">trending_up</span>
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item">
+            <span class="material-icons">group_add</span>
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item active">
+            <span class="material-icons">person</span>
+            <span>Mine</span>
+        </a>
+    </nav>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="mine.js"></script>
+</body>
+</html> 

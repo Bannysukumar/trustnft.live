@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustNFT - Bind Wallet</title>
+    <link rel="stylesheet" href="bind-wallet-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="left-section">
+                <a href="mine.html" class="back-button">
+                    <span class="material-icons">arrow_back</span>
+                </a>
+                <h1>Bind Wallet Address</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="warning-message">
+            Please double-check that the address information is correct. If any asset loss is caused by a user's personal input error, the user will be responsible for it!
+        </div>
+
+        <div class="bind-wallet-form">
+            <h2>Bind Wallet Address</h2>
+            <div class="form-group">
+                <label>USDT Wallet Address</label>
+                <input type="text" id="walletAddress" placeholder="Enter your USDT wallet address">
+                <div class="input-hint">Please enter a valid USDT wallet address</div>
+            </div>
+            <div class="form-group">
+                <label>Network</label>
+                <select id="walletNetwork" class="network-select">
+                    <option value="">Select Network</option>
+                    <option value="TRC20">TRC20 (TRON)</option>
+                    <option value="BEP20">BEP20 (BSC)</option>
+                    <option value="ERC20">ERC20 (Ethereum)</option>
+                </select>
+                <div class="input-hint">Select the network for your USDT wallet</div>
+            </div>
+            <div class="form-group">
+                <label>Remark</label>
+                <input type="text" id="remark" placeholder="Enter a remark for this wallet">
+                <div class="input-hint">Add a note to identify this wallet (optional)</div>
+            </div>
+            <div class="network-info">
+                <h3>Supported Networks</h3>
+                <div class="network-card">
+                    <div class="network-icon">
+                        <span class="material-icons">currency_bitcoin</span>
+                    </div>
+                    <div class="network-details">
+                        <h4>TRC20 (TRON)</h4>
+                        <p>Lower fees, faster transactions</p>
+                    </div>
+                </div>
+                <div class="network-card">
+                    <div class="network-icon">
+                        <span class="material-icons">currency_bitcoin</span>
+                    </div>
+                    <div class="network-details">
+                        <h4>BEP20 (BSC)</h4>
+                        <p>Low fees, good compatibility</p>
+                    </div>
+                </div>
+                <div class="network-card">
+                    <div class="network-icon">
+                        <span class="material-icons">currency_bitcoin</span>
+                    </div>
+                    <div class="network-details">
+                        <h4>ERC20 (Ethereum)</h4>
+                        <p>Widely supported, secure</p>
+                    </div>
+                </div>
+            </div>
+            <button id="confirmButton" class="confirm-button" disabled>Confirm</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="bind-wallet.js"></script>
+</body>
+</html> 

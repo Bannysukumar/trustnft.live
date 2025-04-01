@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustNFT - Profit</title>
+    <link rel="stylesheet" href="profit-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="left-section">
+                <span class="material-icons back-button">arrow_back</span>
+                <h1>Profit</h1>
+            </div>
+            <div class="right-section">
+                <div class="notification-icon">
+                    <span class="material-icons">notifications</span>
+                    <span class="notification-badge">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="profit-container">
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="summary-card">
+                <div class="card-icon">
+                    <span class="material-icons">account_balance_wallet</span>
+                </div>
+                <div class="card-content">
+                    <span class="card-label">Total Profit</span>
+                    <span class="card-value">$<span id="totalProfit">0.00</span></span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <span class="material-icons">today</span>
+                </div>
+                <div class="card-content">
+                    <span class="card-label">Today's Profit</span>
+                    <span class="card-value">$<span id="todayProfit">0.00</span></span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <span class="material-icons">calendar_month</span>
+                </div>
+                <div class="card-content">
+                    <span class="card-label">Monthly Profit</span>
+                    <span class="card-value">$<span id="monthlyProfit">0.00</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profit History -->
+        <div class="profit-section">
+            <div class="section-header">
+                <h2>Profit History</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="daily">Daily</button>
+                    <button class="filter-btn" data-filter="monthly">Monthly</button>
+                </div>
+            </div>
+
+            <div class="profit-list" id="profitList">
+                <!-- Profit items will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Active Products -->
+        <div class="profit-section">
+            <div class="section-header">
+                <h2>Active Products</h2>
+            </div>
+            <div class="active-products" id="activeProducts">
+                <!-- Active product items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <span class="material-icons">home</span>
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item">
+            <span class="material-icons">inventory_2</span>
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item active">
+            <span class="material-icons">trending_up</span>
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item">
+            <span class="material-icons">group_add</span>
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item">
+            <span class="material-icons">person</span>
+            <span>Mine</span>
+        </a>
+    </nav>
+
+    <!-- Profit Item Template -->
+    <template id="profitItemTemplate">
+        <div class="profit-item">
+            <div class="profit-info">
+                <div class="profit-header">
+                    <span class="profit-title"></span>
+                    <span class="profit-date"></span>
+                </div>
+                <div class="profit-details">
+                    <span class="profit-amount"></span>
+                    <span class="profit-status"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Active Product Template -->
+    <template id="activeProductTemplate">
+        <div class="active-product-item">
+            <img class="product-image" alt="Product Image">
+            <div class="product-info">
+                <div class="product-header">
+                    <h3 class="product-name"></h3>
+                    <span class="product-status"></span>
+                </div>
+                <div class="product-stats">
+                    <div class="stat">
+                        <span class="material-icons">schedule</span>
+                        <span class="remaining-days"></span>
+                    </div>
+                    <div class="stat">
+                        <span class="material-icons">payments</span>
+                        <span class="daily-profit"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="profit.js"></script>
+</body>
+</html> 

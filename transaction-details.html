@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Details</title>
+    <link rel="stylesheet" href="transaction-details-styles.css">
+</head>
+<body>
+    <header>
+        <div class="back-button">‹</div>
+        <h1>Transaction Details</h1>
+    </header>
+
+    <div class="transaction-filter">
+        <button class="filter-btn active" data-type="recharge">Recharge</button>
+        <button class="filter-btn" data-type="withdrawal">Withdrawal</button>
+    </div>
+
+    <div class="transaction-details-list">
+        <!-- Transaction details will be inserted here -->
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="transaction-details.js"></script>
+</body>
+</html> 

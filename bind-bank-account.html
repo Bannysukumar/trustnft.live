@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bank</title>
+    <link rel="stylesheet" href="bind-bank-account-styles.css">
+</head>
+<body>
+    <header>
+        <div class="back-button">‹</div>
+        <h1>Add Bank</h1>
+    </header>
+
+    <div class="form-container">
+        <div class="input-group">
+            <label>Name</label>
+            <input type="text" placeholder="Please enter in your name" id="name">
+        </div>
+
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter the phone number" id="phone">
+        </div>
+
+        <div class="input-group">
+            <label>Bank Account</label>
+            <input type="text" placeholder="Enter your bank account..." id="bank-account">
+        </div>
+
+        <div class="input-group">
+            <label>IFSC</label>
+            <input type="text" placeholder="IFSC" id="ifsc">
+        </div>
+
+        <div class="input-group">
+            <label>Payment password</label>
+            <input type="password" placeholder="Enter payment password" id="payment-password">
+        </div>
+
+        <div class="note-section">
+            <p class="note-title">Note:</p>
+            <p class="note-text red">Check the bank account number carefully IFSC is 11 digits,and the fifth digit is the number 0(zero).</p>
+            <p class="note-text">Remember that the security password is 6 digits. Do not use simple passwords such as 123456.</p>
+        </div>
+
+        <button class="submit-button">DONE</button>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    
+    <!-- Initialize Firebase -->
+    <script src="firebase-config.js"></script>
+    
+    <!-- App Scripts -->
+    <script src="bind-bank-account.js"></script>
+</body>
+</html> 

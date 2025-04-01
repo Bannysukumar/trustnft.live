@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #68318C;
+    --secondary-color: #FF6B00;
+    --tab-active-color: #FF6B00;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+header {
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.back-button {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.tab-container {
+    display: flex;
+    background-color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+}
+
+.tab.active {
+    color: var(--tab-active-color);
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--tab-active-color);
+}
+
+.no-records {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    color: #666;
+}
+
+.no-records-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+} 

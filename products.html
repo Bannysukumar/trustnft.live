@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustNFT - Products</title>
+    <link rel="stylesheet" href="products-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="left-section">
+                <span class="material-icons back-button">arrow_back</span>
+                <h1>Products</h1>
+            </div>
+            <div class="right-section">
+                <div class="notification-icon">
+                    <span class="material-icons">notifications</span>
+                    <span class="notification-badge">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="products-container">
+        <!-- Main Navigation Tabs -->
+        <div class="main-nav">
+            <div class="nav-tabs">
+                <div class="nav-tab active">
+                    <span class="material-icons">inventory_2</span>
+                    <span>Products</span>
+                </div>
+                <div class="nav-tab">
+                    <span class="material-icons">card_giftcard</span>
+                    <span>Treasure Hunt</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <div class="category-tab active">Products</div>
+            <div class="category-tab">Treasure Hunt</div>
+            <div class="category-tab">NORMAL</div>
+            <div class="category-tab">SHORT CYCLE</div>
+            <div class="category-tab">VIP</div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+            <!-- Product cards will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <span class="material-icons">home</span>
+            <span>Home</span>
+        </a>
+        <a href="products.html" class="nav-item active">
+            <span class="material-icons">inventory_2</span>
+            <span>Products</span>
+        </a>
+        <a href="profit.html" class="nav-item">
+            <span class="material-icons">trending_up</span>
+            <span>Profit</span>
+        </a>
+        <a href="invite.html" class="nav-item">
+            <span class="material-icons">group_add</span>
+            <span>Invite</span>
+        </a>
+        <a href="mine.html" class="nav-item">
+            <span class="material-icons">person</span>
+            <span>Mine</span>
+        </a>
+    </nav>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="products.js"></script>
+</body>
+</html> 

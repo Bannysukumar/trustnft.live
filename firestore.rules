@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    match /users/{userId} {
+      allow read: if request.auth != null && (request.auth.uid == userId || isAdmin());
+    }
+    
+    match /user_balances/{userId} {
+      allow read: if request.auth != null && (request.auth.uid == userId || isAdmin());
+    }
+    
+    match /referrals/{referralId} {
+      allow read: if request.auth != null;
+    }
+    
+    match /transactions/{transactionId} {
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+    
+    match /profit_schedule/{scheduleId} {
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+  }
+} 

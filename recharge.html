@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrustNFT - Recharge</title>
+    <link rel="stylesheet" href="recharge-styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="left-section">
+                <span class="material-icons back-button">arrow_back</span>
+                <h1>Recharge</h1>
+            </div>
+            <div class="right-section">
+                <div class="notification-icon">
+                    <span class="material-icons">notifications</span>
+                    <span class="notification-badge">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="recharge-container">
+        <!-- Balance Card -->
+        <div class="balance-card">
+            <div class="card-icon">
+                <span class="material-icons">account_balance_wallet</span>
+            </div>
+            <div class="card-content">
+                <span class="card-label">Current Balance</span>
+                <span class="card-value">$<span id="currentBalance">0.00</span></span>
+            </div>
+        </div>
+
+        <!-- Amount Selection -->
+        <div class="section-card">
+            <div class="section-header">
+                <span class="material-icons">payments</span>
+                <h2>Select Amount</h2>
+            </div>
+            <div class="amount-grid">
+                <button class="amount-btn" data-amount="1000">
+                    <span class="amount">$1,000</span>
+                </button>
+                <button class="amount-btn" data-amount="2500">
+                    <span class="amount">$2,500</span>
+                </button>
+                <button class="amount-btn" data-amount="5000">
+                    <span class="amount">$5,000</span>
+                </button>
+                <button class="amount-btn" data-amount="10000">
+                    <span class="amount">$10,000</span>
+                </button>
+                <button class="amount-btn" data-amount="25000">
+                    <span class="amount">$25,000</span>
+                </button>
+                <button class="amount-btn" data-amount="50000">
+                    <span class="amount">$50,000</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="section-card">
+            <div class="section-header">
+                <span class="material-icons">account_balance</span>
+                <h2>Payment Method</h2>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-method active" data-method="usdt">
+                    <div class="method-icon">
+                        <img src="images/icons/usdt.svg" alt="USDT">
+                    </div>
+                    <div class="method-info">
+                        <span class="method-name">USDT Payment</span>
+                        <span class="method-desc">Fast & Secure</span>
+                    </div>
+                    <span class="material-icons check-icon">check_circle</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Details Section -->
+        <div class="section-card" id="usdtDetails">
+            <div class="section-header">
+                <span class="material-icons">qr_code_2</span>
+                <h2>Payment Details</h2>
+            </div>
+            <div class="payment-details">
+                <h2>Payment Details</h2>
+                <div class="details-list">
+                    <div class="detail-item">
+                        <span class="detail-label">Amount to Pay</span>
+                        <span class="detail-value" id="paymentAmount">$1,000.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Network</span>
+                        <span class="detail-value network-badge">BEP20</span>
+                    </div>
+                </div>
+
+                <div class="transaction-section">
+                    <div class="input-group">
+                        <span class="material-icons">receipt_long</span>
+                        <input type="text" id="txnHash" placeholder="Enter Transaction Hash">
+                    </div>
+                    <p class="help-text">
+                        <span class="material-icons">info</span>
+                        Please enter the transaction hash after completing the payment
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="primary-btn submit-btn" disabled>
+                <span class="material-icons">check_circle</span>
+                Submit Payment
+            </button>
+            <button class="secondary-btn history-btn">
+                <span class="material-icons">history</span>
+                Recharge History
+            </button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="recharge.js"></script>
+</body>
+</html> 

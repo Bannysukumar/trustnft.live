@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #68318C;
+    --secondary-color: #FF6B00;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    min-height: 100vh;
+}
+
+header {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.back-button {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.section-title {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.superior-section {
+    margin-bottom: 20px;
+}
+
+.superior-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.user-avatar {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.invitation-section {
+    margin-bottom: 20px;
+}
+
+.invitation-code {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.invitation-button {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.level-list {
+    padding: 0 20px;
+}
+
+.level-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.level-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.level-a { background-color: #FF6B00; }
+.level-b { background-color: #8A2BE2; }
+.level-c { background-color: #808080; }
+
+.level-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.friends-details {
+    background-color: #f8f8f8;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.details-header, .details-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.details-header {
+    color: #666;
+    font-size: 14px;
+}
+
+.details-item {
+    color: #333;
+} 

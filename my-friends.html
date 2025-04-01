@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friends</title>
+    <link rel="stylesheet" href="myfriends-styles.css">
+</head>
+<body>
+    <header>
+        <div class="back-button">‹</div>
+        <h1>My Friends</h1>
+    </header>
+
+    <div class="stats-container">
+        <div class="stat-item">
+            <span class="label">Total Friends</span>
+            <span class="value friends-count">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Active Friends</span>
+            <span class="value active-friends">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Total Commission</span>
+            <span class="value">$<span class="total-commission">0.00</span></span>
+        </div>
+    </div>
+
+    <div class="friends-list">
+        <div class="list-header">
+            <h2>Friends List</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="inactive">Inactive</button>
+            </div>
+        </div>
+        <div class="friends-container">
+            <!-- Friend items will be inserted here -->
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="myfriends.js"></script>
+</body>
+</html> 
