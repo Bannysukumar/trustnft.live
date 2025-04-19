@@ -1,0 +1,42 @@
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group .material-icons {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.form-group .password-toggle {
+    left: auto;
+    right: 12px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.form-group .password-toggle:hover {
+    color: #68318C;
+}
+
+.form-group input:focus {
+    border-color: #68318C;
+    outline: none;
+}
+
+.form-group input:focus + .material-icons {
+    color: #68318C;
+} 

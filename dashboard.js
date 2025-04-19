@@ -5,12 +5,29 @@ document.addEventListener('DOMContentLoaded', function() {
             // Check authentication state
             auth.onAuthStateChanged(async (user) => {
                 if (!user) {
-                    // If not logged in, redirect to login page
+                    // If not logged in, clear localStorage and redirect to login page
+                    localStorage.removeItem('userData');
                     window.location.href = 'index.html';
                     return;
                 }
 
                 try {
+                    // Get user data from localStorage or fetch from Firestore
+                    let userData = JSON.parse(localStorage.getItem('userData'));
+                    if (!userData) {
+                        const userDoc = await db.collection('users').doc(user.uid).get();
+                        if (userDoc.exists) {
+                            userData = userDoc.data();
+                            localStorage.setItem('userData', JSON.stringify({
+                                uid: user.uid,
+                                phone: userData.phone,
+                                email: userData.email,
+                                balance: userData.balance || 0,
+                                lastLogin: new Date().toISOString()
+                            }));
+                        }
+                    }
+
                     // Load all necessary data
                     await loadUserData(user.uid);
                     await loadUserBalance(user.uid);
@@ -399,13 +416,58 @@ document.addEventListener('DOMContentLoaded', function() {
         if (logoutButton) {
             logoutButton.addEventListener('click', async () => {
                 try {
+                    // Save any pending changes before logout
+                    await savePendingChanges();
+                    // Set persistence to NONE before signing out
+                    await auth.setPersistence(firebase.auth.Auth.Persistence.NONE);
+                    // Clear localStorage
+                    localStorage.removeItem('userData');
                     await auth.signOut();
                     window.location.href = 'index.html';
                 } catch (error) {
-                    console.error("Error signing out:", error);
-                    alert('Error signing out');
+                    console.error("Error during logout:", error);
+                    alert('Error signing out. Please try again.');
                 }
             });
+        }
+    }
+
+    // Handle browser close/tab close
+    window.addEventListener('beforeunload', async (event) => {
+        try {
+            await savePendingChanges();
+        } catch (error) {
+            console.error("Error saving changes before unload:", error);
+        }
+    });
+
+    async function savePendingChanges() {
+        try {
+            const user = auth.currentUser;
+            if (!user) return;
+
+            // Get current user data
+            const userDoc = await db.collection('users').doc(user.uid).get();
+            if (!userDoc.exists) return;
+
+            const userData = userDoc.data();
+            
+            // Save any pending changes to user data
+            const updates = {};
+            
+            // Check for any unsaved changes in the UI
+            const currentBalance = document.querySelector('.balance-amount')?.textContent;
+            if (currentBalance) {
+                updates.balance = parseFloat(currentBalance.replace('$', '').trim());
+            }
+
+            // If there are any updates, save them
+            if (Object.keys(updates).length > 0) {
+                await db.collection('users').doc(user.uid).update(updates);
+                console.log("Changes saved successfully");
+            }
+        } catch (error) {
+            console.error("Error saving pending changes:", error);
         }
     }
 
@@ -480,9 +542,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 300000); // 5 minutes
 
     // Handle transaction history click
-    document.querySelector('[data-action="transaction-history"]').addEventListener('click', () => {
-        window.location.href = 'transaction-record.html';
-    });
+    const transactionHistoryBtn = document.querySelector('[data-action="transaction-history"]');
+    if (transactionHistoryBtn) {
+        transactionHistoryBtn.addEventListener('click', () => {
+            window.location.href = 'transaction-record.html';
+        });
+    }
 
     async function loadPopularPlans() {
         try {

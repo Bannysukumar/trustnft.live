@@ -16,6 +16,12 @@ try {
         firebase.initializeApp(firebaseConfig);
     }
 
+    // Set persistence to LOCAL for better user experience
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+        .catch((error) => {
+            console.error("Error setting auth persistence:", error);
+        });
+
     // Initialize services
     const auth = firebase.auth();
     const db = firebase.firestore();
@@ -42,6 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Firebase not initialized');
         alert('Error: Firebase not initialized. Please refresh the page.');
         return;
+    }
+
+    // Check if we're running locally
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        console.log('Running in local development mode');
     }
 
     console.log('Firebase is ready to use');
