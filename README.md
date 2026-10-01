@@ -1,41 +1,68 @@
-<!-- readme-seo: bannysukumar -->
+# Login
 
-# Trustnft
+Login is the site whose HTML title is "Login".
 
-**Trustnft** is an open-source NFT minting and marketplace app. The code is written mainly in HTML and maintained by [Banny Sukumar](https://github.com/Bannysukumar), a blockchain and full-stack developer.
+[![License](https://img.shields.io/github/license/Bannysukumar/trustnft.live)](https://github.com/Bannysukumar/trustnft.live/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/trustnft.live)](https://github.com/Bannysukumar/trustnft.live/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/trustnft.live)](https://github.com/Bannysukumar/trustnft.live/commits/main)
 
-This repository is public so developers can read the source, reuse it under the MIT License, and send improvements.
+## Overview
 
-## About this project
+Login is the site whose HTML title is "Login".
 
-Trustnft lives at [`github.com/Bannysukumar/trustnft.live`](https://github.com/Bannysukumar/trustnft.live). Use it as a starting point for a NFT minting and marketplace app, or study how the HTML parts fit together.
 
-## Tech stack
+What is actually in the repository: `admin/`, `images/`, `js/`. GitHub reports the primary language as HTML.
 
-- Primary language: **HTML**
-- License: **MIT**
-- Maintainer: [Banny Sukumar](https://github.com/Bannysukumar)
+Published site recorded on the repository: https://trustnft-live.vercel.app
 
-## Getting started
+## Tech Stack
+
+| Technology | Where it shows up |
+|---|---|
+| Firebase | Backend services used by this repository |
+
+## Project Structure
+
+```text
+trustnft.live/
+├── admin/
+├── images/
+├── js/
+├── about-us-styles.css
+├── about-us.html
+├── about-us.js
+├── aboutus.html
+├── admin-dashboard.css
+├── admin-dashboard.html
+├── admin-dashboard.js
+├── admin-login.html
+├── admin-login.js
+├── bank-account-styles.css
+├── bank-account.html
+├── bank-account.js
+```
+
+## Getting Started
 
 ```bash
 git clone https://github.com/Bannysukumar/trustnft.live.git
 cd trustnft.live
 ```
 
-Open the project in your editor. Install dependencies only if this repo already includes a manifest such as `package.json`, `requirements.txt`, or a `.csproj` file.
+## Deployment
+
+- The repository homepage is https://trustnft-live.vercel.app.
 
 ## Contributing
 
-Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before you open a pull request.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Banny Sukumar.
+Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
+
+[Banny Sukumar](https://github.com/Bannysukumar)
 
 - GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
 - Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
 - LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
-- ORCID: [0009-0007-9766-6579](https://orcid.org/0009-0007-9766-6579)
