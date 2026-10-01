@@ -1,55 +1,87 @@
-# Login
+<!-- readme-seo: bannysukumar-professional-v4 -->
 
-Login is the site whose HTML title is "Login".
+# TrustNFT
 
-[![License](https://img.shields.io/github/license/Bannysukumar/trustnft.live)](https://github.com/Bannysukumar/trustnft.live/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/trustnft.live)](https://github.com/Bannysukumar/trustnft.live/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/trustnft.live)](https://github.com/Bannysukumar/trustnft.live/commits/main)
+TrustNFT is an HTML and JavaScript investment platform. The login page heading is TrustNFT, and the page subtitle is "TrustNFT Investment Platform". Account data is loaded with Firebase.
 
 ## Overview
 
-Login is the site whose HTML title is "Login".
+`index.html` is a phone-number and password login form. After login, `dashboard.html` shows a balance and promotional banners. Other pages in the repository cover products, mining, recharge, withdrawal, invites, team, coupons, profit, bank account, wallet binding, FAQ, registration, and an admin dashboard.
 
+`package.json` depends on Firebase only. This repository does not contain a Solidity contract, so it is not documented here as an Ethereum NFT marketplace.
 
-What is actually in the repository: `admin/`, `images/`, `js/`. GitHub reports the primary language as HTML.
+The repository homepage is https://trustnft-live.vercel.app.
 
-Published site recorded on the repository: https://trustnft-live.vercel.app
+## Features
+
+Confirmed by HTML files in the repository root:
+
+- Login, registration, and forgot-password pages
+- Dashboard with a balance display
+- Products and buy-product pages
+- Mine, recharge, withdraw, and profit pages
+- Invite, my-team, and my-friends pages
+- Coupon, FAQ, settings, and admin dashboard pages
+- Firebase client setup in `firebase-config.js`
 
 ## Tech Stack
 
 | Technology | Where it shows up |
 |---|---|
-| Firebase | Backend services used by this repository |
+| HTML | Page files such as `index.html` and `dashboard.html` |
+| JavaScript | Page scripts such as `index.js` and `dashboard.js` |
+| Firebase | `package.json` and `firebase-config.js` |
+
+## Architecture
+
+Static HTML pages → JavaScript → Firebase, using `firebase-config.js`.
 
 ## Project Structure
 
 ```text
 trustnft.live/
+├── index.html
+├── dashboard.html
+├── products.html
+├── mine.html
+├── recharge.html
+├── withdraw.html
 ├── admin/
-├── images/
-├── js/
-├── about-us-styles.css
-├── about-us.html
-├── about-us.js
-├── aboutus.html
-├── admin-dashboard.css
-├── admin-dashboard.html
-├── admin-dashboard.js
-├── admin-login.html
-├── admin-login.js
-├── bank-account-styles.css
-├── bank-account.html
-├── bank-account.js
+├── firebase-config.js
+├── firestore.rules
+└── package.json
 ```
 
-## Getting Started
+## Prerequisites
+
+- A browser
+- Node.js and npm if you install the Firebase package from `package.json`
+
+## Installation
 
 ```bash
 git clone https://github.com/Bannysukumar/trustnft.live.git
 cd trustnft.live
+npm install
 ```
+
+Open `index.html` in a browser. Firebase settings are read from `firebase-config.js`.
+
+## Configuration
+
+Put Firebase project settings in `firebase-config.js`. Do not commit a production service-account key. `firestore.rules` is included in the repository.
+
+## Usage
+
+Sign in from `index.html` with the phone and password form. The dashboard and the recharge, withdraw, product, and team pages are separate HTML files linked from the app.
+
+## Demo
+
+https://trustnft-live.vercel.app
 
 ## Deployment
 
-- The repository homepage is https://trustnft-live.vercel.app.
+The GitHub homepage for this repository is https://trustnft-live.vercel.app.
 
 ## Contributing
 
@@ -61,8 +93,6 @@ Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-[Banny Sukumar](https://github.com/Bannysukumar)
+Banny Sukumar
 
-- GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
-- Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
-- LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
+GitHub: https://github.com/Bannysukumar
